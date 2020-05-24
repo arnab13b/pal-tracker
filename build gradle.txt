@@ -1,0 +1,24 @@
+buildscript {
+    repositories {
+        maven { url "http://platform-acceleration-lab-maven.s3.amazonaws.com" }
+        jcenter()
+    }
+
+    dependencies {
+        classpath "io.pivotal.pal.assignments:assignments-plugin:4.7.3"
+    }
+}
+
+apply plugin: "io.pivotal.pal.assignments.plugin"
+
+assignments {
+    apiUrl = "https://cognizant-waveland.education.pivotal.io"
+    emails = [
+       "arnab.banerjee@cognizant.com", // update me
+       "arnab.banerjee@cognizant.com" // update me
+    ]
+    courseCode = "CNA"
+}
+
+defaultTasks "tasks"
+pal-tracker-unexpected-manatee-wh.cfapps.io
