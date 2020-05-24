@@ -2,7 +2,7 @@ version: 2
 jobs:
   build:
     docker:
-      - image: 'mcr.microsoft.com/dotnet/core/sdk:3.1'
+      - image: 'microsoft/dotnet:2.2-sdk'
         environment:
           DEBIAN_FRONTEND: "noninteractive"
     steps:
@@ -22,7 +22,7 @@ jobs:
 
   deployToReview:
     docker:
-      - image: 'mcr.microsoft.com/dotnet/core/sdk:3.1'
+      - image: 'microsoft/dotnet:2.2-sdk'
         environment:
           DEBIAN_FRONTEND: "noninteractive"
           EXTRACT_DEST: /tmp/extracted-archive
@@ -51,14 +51,12 @@ jobs:
           command: |
             cd $EXTRACT_DEST
 
-            cf api $CF_API
-            cf auth "$CF_USERNAME" "$CF_PASSWORD"
-            cf target -o "$CF_ORG" -s "$CF_SPACE_REVIEW"
+            cf login -a $CF_API -u "$CF_USERNAME" -p "$CF_PASSWORD" -o "$CF_ORG" -s "$CF_SPACE_REVIEW"
             cf push -f manifest-$ENVIRONMENT.yml
 
   deployToProd:
     docker:
-      - image: 'mcr.microsoft.com/dotnet/core/sdk:3.1'
+      - image: 'microsoft/dotnet:2.2-sdk'
         environment:
           DEBIAN_FRONTEND: "noninteractive"
           EXTRACT_DEST: /tmp/extracted-archive
@@ -87,9 +85,7 @@ jobs:
           command: |
             cd $EXTRACT_DEST
 
-            cf api $CF_API
-            cf auth "$CF_USERNAME" "$CF_PASSWORD"
-            cf target -o "$CF_ORG" -s "$CF_SPACE_PROD"
+            cf login -a $CF_API -u "$CF_USERNAME" -p "$CF_PASSWORD" -o "$CF_ORG" -s "$CF_SPACE_PROD"
             cf push -f manifest-$ENVIRONMENT.yml
 
 workflows:
@@ -103,7 +99,7 @@ workflows:
       - canDeployToProduction:
           type: approval
           requires:
-          - deployToReview
+           - deployToReview
       - deployToProd:
           requires:
-          - canDeployToProduction
+            - canDeployToProduction
