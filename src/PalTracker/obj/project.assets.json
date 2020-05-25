@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\arnab\\pal-tracker\\src\\PalTracker\\PalTracker.csproj",
+      "projectUniqueName": "C:\\Users\\Arnab\\pal-tracker\\src\\PalTracker\\PalTracker.csproj",
       "projectName": "PalTracker",
-      "projectPath": "C:\\Users\\arnab\\pal-tracker\\src\\PalTracker\\PalTracker.csproj",
+      "projectPath": "C:\\Users\\Arnab\\pal-tracker\\src\\PalTracker\\PalTracker.csproj",
       "packagesPath": "C:\\Users\\Arnab\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\arnab\\pal-tracker\\src\\PalTracker\\obj\\",
+      "outputPath": "C:\\Users\\Arnab\\pal-tracker\\src\\PalTracker\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Arnab\\AppData\\Roaming\\NuGet\\NuGet.Config"

@@ -383,3 +383,5 @@ C:\Users\Arnab\pal-tracker\test\PalTrackerTests\obj\Debug\netcoreapp3.1\PalTrack
 C:\Users\Arnab\pal-tracker\test\PalTrackerTests\obj\Debug\netcoreapp3.1\PalTrackerTests.csproj.CopyComplete
 C:\Users\Arnab\pal-tracker\test\PalTrackerTests\obj\Debug\netcoreapp3.1\PalTrackerTests.dll
 C:\Users\Arnab\pal-tracker\test\PalTrackerTests\obj\Debug\netcoreapp3.1\PalTrackerTests.pdb
+C:\Users\Arnab\pal-tracker\test\PalTrackerTests\bin\Debug\netcoreapp3.1\Castle.Core.dll
+C:\Users\Arnab\pal-tracker\test\PalTrackerTests\bin\Debug\netcoreapp3.1\Moq.dll
