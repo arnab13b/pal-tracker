@@ -10,7 +10,6 @@
 using System;
 using System.Reflection;
 
-[assembly: Microsoft.AspNetCore.Mvc.Testing.WebApplicationFactoryContentRootAttribute("PalTracker, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null", "C:\\Users\\Arnab\\pal-tracker\\src\\PalTracker", "PalTracker.csproj", "0")]
 [assembly: System.Reflection.AssemblyCompanyAttribute("PalTrackerTests")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]

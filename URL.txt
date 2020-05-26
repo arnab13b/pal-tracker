@@ -1,2 +1,29 @@
 
- Randm Url Exercise 1 : pal-tracker-unexpected-manatee-wh.cfapps.io
+ 
+cd ~/workspace/assignment-submission
+
+./gradlew  cloudNativeDeveloperCloudFoundry -PserverUrl=https://pal-tracker-insightful-porcupine-vb.cfapps.io
+
+Randm Url Exercise 1 : pal-tracker-unexpected-manatee-wh.cfapps.io
+
+ Exercise 2 :  pal-tracker-insightful-porcupine-vb.cfapps.io
+./gradlew  cloudNativeDeveloperCloudFoundry -PserverUrl=https://pal-tracker-insightful-porcupine-vb.cfapps.io
+
+Exercise 4 : Pipelines for multiple environments
+ pal-tracker-insightful-porcupine-vb.cfapps.io
+This was supposed to be .net assignment task submission but since review and production space was not created i  submitted like below as noted by Prajina.
+./gradlew  cloudNativeDeveloperPipelines -PreviewUrl=https://pal-tracker-insightful-porcupine-vb.cfapps.io -PproductionUrl=https://https://pal-tracker-insightful-porcupine-vb.cfapps.io
+
+./gradlew  cloudNativeDeveloperReviewPipeline -PreviewUrl=https://pal-tracker-insightful-porcupine-vb.cfapps.io
+cloudNativeDeveloperReviewPipeline
+PreviewUrl=https://${REVIEW_APP_URL} and -PproductionUrl=https://${PRODUCTION_APP_URL}
+cloudNativeDeveloperReviewPipeline
+
+git add -AN
+git add -p
+git commit -m"cloudNativeDeveloperCloudFoundry"
+git push --tags -u origin master
+dotnet publish  src/PalTracker --framework netcoreapp2.2 --configuration Release
+dotnet test test/PalTrackerTests --filter PalTrackerTests.TimeEntry
+
+https://console.run.pivotal.io
