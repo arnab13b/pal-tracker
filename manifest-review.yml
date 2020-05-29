@@ -3,5 +3,6 @@ applications:
   path: src/PalTracker/bin/Release/netcoreapp3.1/publish/
   routes:
   - route: msg-pal-tracker-review.apps.arnab.pal.pivotal.io
+  - route: time-entries
   env:
     WELCOME_MESSAGE: Hello from the review environment
